@@ -185,7 +185,7 @@ const Dashboard = (): ReactElement => {
       {implementationABIDialog.open && (
         <ImplementationABIDialog
           networkPrefix={networkPrefix}
-          blockExplorerLink={evalTemplate(chainInfo.blockExplorerUriTemplate.address, {
+          blockExplorerLink={evalTemplate(chainInfo!.blockExplorerUriTemplate.address, {
             address: implementationABIDialog.implementationAddress,
           })}
           implementationAddress={implementationABIDialog.implementationAddress}

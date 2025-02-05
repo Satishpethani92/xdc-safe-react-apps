@@ -13,10 +13,10 @@ type SafeThemeProviderProps = {
   children: (theme: Theme) => React.ReactNode
 }
 
-export const ThemeModeContext = React.createContext<string>(EModes.LIGHT)
+export const ThemeModeContext = React.createContext<string>(EModes.DARK)
 
 const SafeThemeProvider: FC<SafeThemeProviderProps> = ({ children }) => {
-  const [mode, setMode] = useState(EModes.LIGHT)
+  const [mode, setMode] = useState(EModes.DARK)
 
   const theme = useMemo(() => createSafeTheme(mode), [mode])
 
